@@ -1,0 +1,18 @@
+2022-05-30T21:30:24+00:00 CRITICAL Uncaught Error: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND' in /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php:84
+Stack trace:
+#0 /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php(45): MailPoet\Doctrine\ConnectionFactory->getDriverOptions('+03:00', 'utf8mb4', 'utf8mb4_unicode...')
+#1 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(453): MailPoet\Doctrine\ConnectionFactory->createConnection()
+#2 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(1964): MailPoetGenerated\FreeCachedContainer->getConnectionService()
+#3 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(463): MailPoetGenerated\FreeCachedContainer->getEntityManagerFactoryService()
+#4 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(1932): MailPoetGenerated\FreeCachedContainer->getEntityManagerService()
+#5 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(325 בקובץ /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php בשורה 84
+
+2022-05-30T21:30:32+00:00 CRITICAL Uncaught Error: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND' in /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php:84
+Stack trace:
+#0 /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php(45): MailPoet\Doctrine\ConnectionFactory->getDriverOptions('+03:00', 'utf8mb4', 'utf8mb4_unicode...')
+#1 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(453): MailPoet\Doctrine\ConnectionFactory->createConnection()
+#2 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(1964): MailPoetGenerated\FreeCachedContainer->getConnectionService()
+#3 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(463): MailPoetGenerated\FreeCachedContainer->getEntityManagerFactoryService()
+#4 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(1932): MailPoetGenerated\FreeCachedContainer->getEntityManagerService()
+#5 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(325 בקובץ /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php בשורה 84
+
