@@ -152,7 +152,7 @@ function tranzilla_init_gateway_class() {
 						'price_type' => "G",
 						'vat_percent' => 17
 					)
-				),	
+				),
 			));
 
 			$time = time();
