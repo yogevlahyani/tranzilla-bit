@@ -51,6 +51,8 @@ function tranzilla_init_gateway_class() {
 			add_action('woocommerce_receipt_' . $this->id, array($this, 'receipt_page')); 
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'payment_scripts' ) );
+
+			add_action( 'woocommerce_api_callback', 'callback_handler' );
  		}
 
  		public function init_form_fields(){
@@ -94,69 +96,6 @@ function tranzilla_init_gateway_class() {
 			if ( $this->description ) {
 				echo wpautop( wp_kses_post( $this->description ) );
 			}
-
-			/*
-
-			global $woocommerce;
-
-			$json = json_encode(array(
-				'terminal_name' => $this->terminal_name,
-				'success_url' => "https://pay.tranzila.com/process/success",
-				'failure_url' => "https://pay.tranzila.com/process/fail",
-				'txn_currency_code' => "ILS",  
-				'txn_type' => "debit",
-				'items' => array(
-					array(
-						'name' => "Checkout",
-						'unit_price' => intval($woocommerce->cart->total),
-						'price_type' => "G",
-						'vat_percent' => 17
-					)
-				)
-			));
-
-			$time = time();
-			$appKey = $this->public_key;
-			$secret = $this->private_key;
-			$nonce = bin2hex(random_bytes(40)); //actually 80 characters string
-			$accessToken = hash_hmac('sha256', $appKey, $secret . $time . $nonce);
-
-			$ch = curl_init('https://api.tranzila.com/v1/transaction/bit/init');
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-			curl_setopt($ch, CURLOPT_POST, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-					'Content-Type: application/json',
-					'Content-Length: ' . strlen($json),
-					'X-tranzila-api-app-key: ' . $appKey,
-					'X-tranzila-api-request-time:' . $time,
-					'X-tranzila-api-nonce:' . $nonce,
-					'X-tranzila-api-access-token:' . $accessToken
-				)
-			);
-
-			$response = curl_exec($ch);
-			curl_close($ch);
-
-			if( !is_wp_error( $response ) ) {
-				 $body = json_decode( $response, true );
-		 
-				 if ( $body['error_code'] == 0 && $body['message'] == "Success") {
-					echo '<iframe src="'.$body['sale_url'].'"></iframe>';
-					return;
-				 } else {
-					wc_add_notice(  'שגיאת התחברות! אנא נסו שנית מאוחר יותר או שלמו באמצעי תשלום אחר.', 'error' );
-					return;
-				}
-		 
-			} else {
-				wc_add_notice(  'שגיאת התחברות! אנא נסו שנית מאוחר יותר או שלמו באמצעי תשלום אחר.', 'error' );
-				return;
-			}
-			*/	
 		}
 
 	 	public function payment_scripts() {
@@ -185,99 +124,25 @@ function tranzilla_init_gateway_class() {
 		}
 
 		public function process_payment( $order_id ) {
-		//	global $woocommerce;
- 
-			$order = wc_get_order( $order_id );
-
-			return [
-				'result'   => 'success',
-				'redirect' => $order->get_checkout_payment_url( true ),
-			];
-/*
-			$json = json_encode(array(
-				'terminal_name' => $this->terminal_name,
-				'success_url' => "https://pay.tranzila.com/process/success",
-				'failure_url' => "https://pay.tranzila.com/process/fail",
-				'txn_currency_code' => "ILS",  
-				'txn_type' => "debit",
-				'items' => array(
-					array(
-						'name' => "Checkout",
-						'unit_price' => intval($woocommerce->cart->total),
-						'price_type' => "G",
-						'vat_percent' => 17
-					)
-				)
-			));
-
-			$time = time();
-			$appKey = $this->public_key;
-			$secret = $this->private_key;
-			$nonce = bin2hex(random_bytes(40)); //actually 80 characters string
-			$accessToken = hash_hmac('sha256', $appKey, $secret . $time . $nonce);
-
-			$ch = curl_init('https://api.tranzila.com/v1/transaction/bit/init');
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-			curl_setopt($ch, CURLOPT_POST, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-					'Content-Type: application/json',
-					'Content-Length: ' . strlen($json),
-					'X-tranzila-api-app-key: ' . $appKey,
-					'X-tranzila-api-request-time:' . $time,
-					'X-tranzila-api-nonce:' . $nonce,
-					'X-tranzila-api-access-token:' . $accessToken
-				)
-			);
-
-			$response = curl_exec($ch);
-			curl_close($ch);
-
-			if( !is_wp_error( $response ) ) {
-				 $body = json_decode( $response, true );
-		 
-				 if ( $body['error_code'] == 0 && $body['message'] == "Success") {
-				//open
-					$order->payment_complete();
-					$order->reduce_order_stock();
-		 
-					// some notes to customer (replace true with false to make it private)
-					$order->add_order_note( 'התשלום בוצע בהצלחה!', false );
-		 
-					// Empty cart
-					$woocommerce->cart->empty_cart();
-		 
-					// Redirect to the thank you page
-					return array(
-						'result' => 'success',
-						'redirect' => $this->get_return_url( $order )
-						
-					);
-				//close!
-				 } else {
-					wc_add_notice(  'שגיאת התחברות! אנא נסו שנית מאוחר יותר או שלמו באמצעי תשלום אחר.', 'error' );
-					return;
-				}
-		 
-			} else {
-				wc_add_notice(  'שגיאת התחברות! אנא נסו שנית מאוחר יותר או שלמו באמצעי תשלום אחר.', 'error' );
-				return;
-			}
-		 */		
- 		}
-	 
-		function receipt_page($order) { 
 			global $woocommerce;
- 
+			$order = wc_get_order( $order_id );
+
+			return array(
+				'result' 	=> 'success',
+				'redirect'	=> $order->get_checkout_payment_url( true ),
+			);
+		}
+
+
+		function receipt_page($order_id) { 
+			global $woocommerce;
+
 			$order = wc_get_order( $order_id );
 
 			$json = json_encode(array(
 				'terminal_name' => $this->terminal_name,
-				'success_url' => "https://sweetango.co.il/wp-content/plugins/woocommerce-gateway-gobit/pages/redirects.php",
-				'failure_url' => "https://sweetango.co.il/wp-content/plugins/woocommerce-gateway-gobit/pages/redirects.php",
+				'success_url' => site_url('/wc-api/CALLBACK?order_id='.$order_id),
+				'failure_url' => site_url('/wc-api/CALLBACK?order_id='.$order_id),
 				'txn_currency_code' => "ILS",  
 				'txn_type' => "debit",
 				'items' => array(
@@ -287,7 +152,7 @@ function tranzilla_init_gateway_class() {
 						'price_type' => "G",
 						'vat_percent' => 17
 					)
-				)
+				),	
 			));
 
 			$time = time();
@@ -307,9 +172,9 @@ function tranzilla_init_gateway_class() {
 					'Content-Type: application/json',
 					'Content-Length: ' . strlen($json),
 					'X-tranzila-api-app-key: ' . $appKey,
-					'X-tranzila-api-request-time:' . $time,
-					'X-tranzila-api-nonce:' . $nonce,
-					'X-tranzila-api-access-token:' . $accessToken
+					'X-tranzila-api-request-time: ' . $time,
+					'X-tranzila-api-nonce: ' . $nonce,
+					'X-tranzila-api-access-token: ' . $accessToken
 				)
 			);
 
@@ -317,37 +182,44 @@ function tranzilla_init_gateway_class() {
 			curl_close($ch);
 
 			if( !is_wp_error( $response ) ) {
-				 $body = json_decode( $response, true );
-		 
-				 if ( $body['error_code'] == 0 && $body['message'] == "Success") {
+				$body = json_decode( $response, true );
+
+				if ( $body['error_code'] == 0 && $body['message'] == "Success") {
 					echo '<iframe src="'.$body['sale_url'].'" height="500px"></iframe>';
 					return;
-				/*
-					$order->payment_complete();
-					$order->reduce_order_stock();
-		 
-					// some notes to customer (replace true with false to make it private)
-					$order->add_order_note( 'התשלום בוצע בהצלחה!', false );
-		 
-					// Empty cart
-					$woocommerce->cart->empty_cart();
-		 
-					// Redirect to the thank you page
-					return array(
-						'result' => 'success',
-						'redirect' => $this->get_return_url( $order )
-						
-					);
-				*/
-				 } else {
+				} else {
 					wc_add_notice(  'שגיאת התחברות! אנא נסו שנית מאוחר יותר או שלמו באמצעי תשלום אחר.', 'error' );
 					return;
 				}
-		 
+		
 			} else {
 				wc_add_notice(  'שגיאת התחברות! אנא נסו שנית מאוחר יותר או שלמו באמצעי תשלום אחר.', 'error' );
 				return;
 			}
-		} 
+		}
+
+		function callback_handler() {
+			global $woocommerce;
+			$order_id = $_GET['order_id'];
+
+			if (!isset($order_id)) {
+				return;
+			}
+		
+			$order = wc_get_order( $order_id );
+			$order->payment_complete();
+			$order->reduce_order_stock();
+		
+			// some notes to customer (replace true with false to make it private)
+			$order->add_order_note( 'התשלום בוצע בהצלחה!', false );
+		
+			// Empty cart
+			$woocommerce->cart->empty_cart();
+		
+			return [
+				'result'   => 'success',
+				'redirect' => $this->get_return_url( $order ),
+			];
+		}
 	}
 }

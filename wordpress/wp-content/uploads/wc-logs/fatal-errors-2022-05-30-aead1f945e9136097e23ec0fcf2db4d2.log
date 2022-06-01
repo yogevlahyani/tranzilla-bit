@@ -16,3 +16,25 @@ Stack trace:
 #4 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(1932): MailPoetGenerated\FreeCachedContainer->getEntityManagerService()
 #5 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(325 בקובץ /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php בשורה 84
 
+2022-05-30T22:34:09+00:00 CRITICAL Uncaught Error: Cannot use object of type Automattic\WooCommerce\Admin\Overrides\Order as array in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:292
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(307): WC_Tranzilla_Gateway->receipt_page(15)
+#1 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/checkout/order-receipt.php(44): do_action('woocommerce_rec...', 15)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php(208): wc_get_template('checkout/order-...', Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php(59): WC_Shortcode_Checkout::order_pay(15)
+#7 /var/www/html/wp-conten בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 292
+
+2022-05-30T22:42:04+00:00 CRITICAL Uncaught Error: Cannot use object of type Automattic\WooCommerce\Admin\Overrides\Order as array in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:277
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(307): WC_Tranzilla_Gateway->receipt_page(15)
+#1 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/checkout/order-receipt.php(44): do_action('woocommerce_rec...', 15)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php(208): wc_get_template('checkout/order-...', Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php(59): WC_Shortcode_Checkout::order_pay(15)
+#7 /var/www/html/wp-conten בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 277
+

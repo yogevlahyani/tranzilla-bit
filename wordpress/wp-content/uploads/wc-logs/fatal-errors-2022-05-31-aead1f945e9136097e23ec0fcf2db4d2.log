@@ -1,0 +1,168 @@
+2022-05-31T23:04:32+00:00 CRITICAL Uncaught Error: Call to undefined function wc_add_notice() in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:29
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/htm בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 29
+
+2022-05-31T23:05:11+00:00 CRITICAL Uncaught Error: Call to undefined function wc_add_notice() in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:29
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/htm בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 29
+
+2022-05-31T23:05:39+00:00 CRITICAL Uncaught Error: Call to undefined function wc_add_notice() in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:30
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/htm בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 30
+
+2022-05-31T23:05:43+00:00 CRITICAL Uncaught Error: Call to undefined function wc_add_notice() in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:30
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/htm בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 30
+
+2022-05-31T23:05:54+00:00 CRITICAL Uncaught Error: Call to undefined function wc_add_notice() in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:30
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/htm בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 30
+
+2022-05-31T23:05:57+00:00 CRITICAL Uncaught Error: Call to undefined function wc_add_notice() in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:30
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/htm בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 30
+
+2022-05-31T23:06:32+00:00 CRITICAL Uncaught Error: Call to a member function payment_complete() on bool in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:33
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /v בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 33
+
+2022-05-31T23:06:45+00:00 CRITICAL Uncaught Error: Call to a member function payment_complete() on bool in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:34
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1143): get_tranzilla_success(Object(WP_REST_Request))
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(990): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tranzilla-bit-...', Array, NULL)
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(394): WP_REST_Server->serve_request('/tranzilla-bit-...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /v בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 34
+
+2022-05-31T23:29:06+00:00 CRITICAL Uncaught Error: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND' in /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php:84
+Stack trace:
+#0 /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php(45): MailPoet\Doctrine\ConnectionFactory->getDriverOptions('+03:00', 'utf8mb4', 'utf8mb4_unicode...')
+#1 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(453): MailPoet\Doctrine\ConnectionFactory->createConnection()
+#2 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(1964): MailPoetGenerated\FreeCachedContainer->getConnectionService()
+#3 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(463): MailPoetGenerated\FreeCachedContainer->getEntityManagerFactoryService()
+#4 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(1932): MailPoetGenerated\FreeCachedContainer->getEntityManagerService()
+#5 /var/www/html/wp-content/plugins/mailpoet/generated/FreeCachedContainer.php(325 בקובץ /var/www/html/wp-content/plugins/mailpoet/lib/Doctrine/ConnectionFactory.php בשורה 84
+
+2022-05-31T23:35:26+00:00 CRITICAL Uncaught Error: Call to a member function payment_complete() on bool in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:205
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(307): WC_Tranzilla_Gateway->callback_handler('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-api.php(161): do_action('woocommerce_api...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): WC_API->handle_api_requests(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(770): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1330): WP->m בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 205
+
+2022-05-31T23:38:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Tranzilla_Gateway::callback_handler(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 307 and exactly 6 expected in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:201
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(307): WC_Tranzilla_Gateway->callback_handler('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-api.php(161): do_action('woocommerce_api...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): WC_API->handle_api_requests(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 201
+
+2022-05-31T23:39:37+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Tranzilla_Gateway::callback_handler(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 307 and exactly 2 expected in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:201
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(307): WC_Tranzilla_Gateway->callback_handler('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-api.php(161): do_action('woocommerce_api...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): WC_API->handle_api_requests(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 201
+
+2022-05-31T23:43:22+00:00 CRITICAL Uncaught Error: Call to a member function payment_complete() on bool in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:210
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(307): WC_Tranzilla_Gateway->callback_handler('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-api.php(161): do_action('woocommerce_api...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): WC_API->handle_api_requests(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(770): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1330): WP->m בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 210
+
+2022-05-31T23:43:35+00:00 CRITICAL Uncaught Error: Call to a member function payment_complete() on bool in /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php:210
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(307): WC_Tranzilla_Gateway->callback_handler('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-api.php(161): do_action('woocommerce_api...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(307): WC_API->handle_api_requests(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(524): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(398): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(770): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1330): WP->m בקובץ /var/www/html/wp-content/plugins/tranzilla-bit-payment-gateway/tranzilla-bit-payment-gateway.php בשורה 210
+
